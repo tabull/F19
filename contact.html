@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loughborough University Timetable Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    
+<!--
+    NAVBAR
+-->
+    
+<nav id="navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <img style="max-width:204px; margin-top: -7px;"
+             src="lulogoW.png">
+        </div>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="form.html">Form</a></li>
+          <li><a href="roomav.html">Room Availability</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="booking.html">Booking Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+        <p>You are logged in as, Bob Murphy</p>
+        <div id="button">
+          <button type="button" class="btn" id="regButton"><a href="login.html">Logout</a></button>
+        </div>
+    </div>
+  </div>
+</nav>
+    
+<!--
+    CONTACT FORM
+-->
+ 
+    <div class="container">
+        <div id="fBorderP">
+            <h1>
+                Contact
+            </h1>
+            <hr id="hrc">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="inputName" class="control-label col-xs-5">First Name</label>
+                        <div class="col-xs-3">
+                            <input type="fName" class="form-control" id="inputFName" placeholder="" value="Bob">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName" class="control-label col-xs-5">Last Name</label>
+                        <div class="col-xs-3">
+                            <input type="lName" class="form-control" id="inputLName" placeholder="" value="Murphy">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="department" class="control-label col-xs-5">Department</label>
+                        <div class="col-xs-4">
+                            <input type="department" class="form-control" id="inputDepartment" value="Computer Science">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDay" class="control-label col-xs-4">Email Address</label>
+                        <div class="col-xs-5">
+                            <input type="email" class="form-control" id="inputEmail" value="b.murphy@admin.lboro.ac.uk">
+                        </div>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <label for="comment">Query:</label>
+                                <textarea class="form-control" rows="4" id="comment"></textarea>
+                    </div>
+                </div>
+                <hr id="hrc">
+                    <div class="form-group">
+                        <div class="col-xs-offset-1 col-xs-10">
+                            <button type="submit" class="btn btn-lg btn-block" id="subB"><a href="confirmQ.html">Submit</a></button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+</div>
+</body>
+</html>  

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loughborough University Timetable Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    
+<!--
+    NAVBAR  
+-->
+    
+<nav id="navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <img style="max-width:204px; margin-top: -7px;"
+             src="lulogoW.png">
+        </div>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="form.html">Form</a></li>
+        <li><a href="roomav.html">Room Availability</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="booking.html">Booking Status</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+        <p>You are logged in as, Bob Murphy</p>
+        <div id="button">
+          <button type="button" class="btn" id="regButton"><a href="login.html">Logout</a></button>
+        </div>
+    </div>
+  </div>
+</nav>
+    
+<!--
+    BODY
+-->
+    <div class="container" id="container">
+        <h1>
+            Select the Area of Campus:
+        </h1>
+        <div class="box" id="left">
+            <a href = "roomavW1.html">WEST</a>
+        </div>
+        <div class="box" id="right">
+            <a href = "roomavC1.html">CENTRAL</a>
+        </div>
+        <div class="box" id="center">
+            <a href = "roomavE1.html">EAST</a>
+        </div>
+    </div>   
+</body>
+</html>

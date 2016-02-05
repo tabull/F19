@@ -1,0 +1,168 @@
+.bs-example{
+    margin: 10px;
+}
+
+.form-horizontal .control-label{
+    padding-top: 7px;
+}
+.navbar-nav > li > a {
+    min-height:65px !important;
+}
+
+.navbar {
+    min-height:65px !important;
+}
+
+#cCodeA { /* available */
+    background-color:#96db96;
+}
+
+#cCodeP { /* partial */
+    background-color: #f2d456;
+}
+
+#cCodeB { /* booked */
+    background-color: #ee7e7b;
+}
+
+form {
+    margin-bottom:0px;
+}
+
+#button {
+    padding: 10px;
+    margin-top: 2px;
+    margin-right: 2px;
+    position:absolute; top:0; right:0;
+}
+
+.navbar p {
+    font-size: 11px;
+    padding:10px;
+    margin-top: 12px;
+    margin-right: 80px;
+    position:absolute; top:0; right:0;
+}
+
+#regButton a {
+    text-decoration: none;
+    color: white;
+
+}
+
+#regButton a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#logButton a {
+    text-decoration: none;
+    color: #31006B;
+    background-color: white;
+}
+
+#logButton {
+    text-decoration: none;
+    background-color:white;
+    color:#31006B;
+}
+
+#regButton {
+    background-color:#CC0066;
+    color:white;
+}
+
+#logButton a:hover {
+    text-decoration: none;
+    color: #CC0066; 
+}
+
+#navbar {
+    background-color:#31006B;
+    color:white;
+}
+
+#navbar ul a {
+    color:white;
+}
+
+#navbar ul a:hover {
+    background-color:#CC0066;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top:0px;
+}
+
+h4 {
+    font-size:17px;
+    margin:5px;
+}
+
+#subButton {
+    text-decoration: none;
+    color: white;
+    background-color:#CC0066;
+}
+
+#subButton:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#bookTime:hover {
+    background-color: #96db96;
+}
+
+th {
+    background-color:#31006B;
+    color:white;
+}
+
+#roomAV {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+
+}
+
+#fBorder {
+    border-style:solid;
+    border-width:1px;
+    border-color:#E4E4E4;
+    display:inline-block;
+    width:90%;
+    margin-bottom:10px;
+}
+
+.container {
+    text-align:center;
+}
+
+hr {
+    border-width:1px;
+    margin:0px;
+    border-color:#E4E4E4;
+}
+
+#pages li a {
+    color:#31006B;
+}
+
+#pages .active a {
+    background-color: #CC0066;
+    color:white;
+}
+
+#pages {
+    margin-top:0px !important;
+    margin-bottom:0px;
+}
+
+td {
+    height:50px !important;
+
+}

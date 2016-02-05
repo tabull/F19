@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loughborough University Timetable Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="dropdown.js"></script>
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    
+<!--
+    NAVBAR  
+-->
+    
+<nav id="navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <img style="max-width:204px; margin-top: -7px;"
+             src="lulogoW.png">
+        </div>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="form.html">Form</a></li>
+        <li><a href="roomav.html">Room Availability</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="booking.html">Booking Status</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+        <p>You are logged in as, Bob Murphy</p>
+        <div id="button">
+          <button type="button" class="btn" id="regButton"><a href="login.html">Logout</a></button>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<!--
+    ROUND NAVBAR  
+-->
+<div class="rNavbar"> 
+    <ul id="roundNav" class="nav nav-justified">
+        <li class="active"><a href="#">Round 1</a></li>
+        <li><a href="#">Round 2</a></li>
+        <li><a href="#">Round 3</a></li>
+    </ul>
+    <p>10/12/2015</p>
+</div>
+    
+    
+<!--
+    BODY  
+-->
+    
+    <h1>
+        Timetable Application Form
+    </h1>
+    
+    <div class="container">
+        
+        <div id="fBorder" class="bs-example">
+            <form class="form-horizontal">
+                
+                <!--
+                    MODULE  
+                -->
+                
+                <div id="module">
+                    <div>
+                        <h3>Module</h3>
+                        <hr>
+                    </div>
+                <div class="form-group">
+                    <label for="inputDept" class="control-label col-xs-3">Department Code</label>
+                    <div class="col-xs-1">
+                        <input type="dept" class="form-control input-sm" id="inputDept" value="CO">
+                    </div>
+                    
+                    <label for="inputModuleCode" class="control-label col-xs-1">Module Code</label>
+                    <div class="col-xs-1">
+                        <select class="form-control input-sm" id="mddl" onchange="configureDropDownListM(this,document.getElementById('tddl'))">
+                            <option>COB100</option>
+                            <option>COB101</option>
+                            <option>COB106</option>
+                            <option>COB107</option>
+                            <option>COB108</option>
+                            <option>COB120</option>
+                            <option>COB122</option>
+                            <option>COB150</option>
+                            <option>COB155</option>
+                            <option>COB201</option>
+                            <option>COB231</option>
+                            <option>COB232</option>
+                            <option>COB249</option>
+                            <option>COB290</option>
+                            <option>COB295</option>
+                            <option>COB301</option>
+                        </select>
+                    </div>                    
+          
+                <div class="form-group">
+                    <label for="inputModuleTitle" class="control-label col-xs-1">Module Title</label>
+                    <div class="col-xs-3">
+                        <select class="form-control input-sm" id="tddl">
+                            <option>Advanced Web Design</option>
+                            <option>Requirements Engineering</option>
+                            <option>Formal Languages and Theory of Computation</option>
+                            <option>AI Methods</option>
+                            <option>Knowledge-Based Decision Support</option>
+                            <option>Computer Graphics</option>
+                            <option>Software Engineering 2</option>
+                            <option>Formal Specification</option>
+                            <option>Mobile Application Development</option>
+                            <option>Professional Issues in Computing</option>
+                            <option>Operating Systems, Networks and the Internet 1</option>
+                            <option>Operating Systems, Networks and the Internet 2</option>
+                            <option>Professional Training Preparation</option>
+                            <option>Team Projects</option>
+                            <option>Team Project</option>
+                            <option>Industrial Expertise</option>
+                        </select>
+                    </div>   
+                    </div>
+                    
+                     <label for="inputPart" class="control-label col-xs-2">Part</label>
+                    <div class="col-xs-1">
+                        <select class="form-control input-sm" id="inputRooms">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>P</option>
+                            <option>F</option>
+                        </select>
+                    </div>
+                    
+                    <label for="inputLecture" class="control-label col-xs-2">Lecture Type</label>
+                    <div class="col-xs-2">
+                        <select class="form-control input-sm" id="inputRooms">
+                            <option>Any</option>
+                            <option>Traditional</option>
+                            <option>Seminar</option>
+                            <option>Lab</option>
+                        </select>
+                    </div>
+                    
+                    <label for="inputStudents" class="control-label col-xs-2">Number of Students</label>
+                    <div class="col-xs-1">
+                        <input type="range" min="0" max="400" value="50" id="slider" step="1" oninput="outputUpdate(value)">
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="dept" class="form-control input-sm" id="students" value="50" oninput="sliderUpdate(value)">                     
+                    </div>
+                </div>
+                    <hr id="hrm"> <!-- line -->
+                </div>
+                
+                <!--
+                    TIME REQUIRED  
+                -->
+                    <div id="timeReq">
+                        <div>
+                            <h2>Time Required</h2>
+                            <hr>
+                        </div>
+                        <div class="form-group">
+                    
+                            <label for="inputDay" class="control-label col-xs-1">Day</label>
+                            <div class="col-xs-2">
+                                <select class="form-control input-sm" id="inputPeriod">
+                                    <option>Any</option>
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>Wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                </select>
+                            </div>
+
+                            <label for="inputPeriod" class="control-label col-xs-1">Period</label>
+                            <div class="col-xs-1">
+                                <select class="form-control input-sm" id="inputPeriod">
+                                    <option>1 (09:00)</option>
+                                    <option>2 (10:00)</option>
+                                    <option>3 (11:00)</option>
+                                    <option>4 (12:00)</option>
+                                    <option>5 (13:00)</option>
+                                    <option>6 (14:00)</option>
+                                    <option>7 (15:00)</option>
+                                    <option>8 (16:00)</option>
+                                    <option>9 (17:00)</option>
+                                </select>
+                            </div>
+                            
+                            <label for="inputLength" class="control-label col-xs-1">Length (hours)</label>
+                            <div class="col-xs-1">
+                                <select class="form-control input-sm" id="inputLength">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            
+                            <label for="inputSemester" class="control-label col-xs-1">Semester</label>
+                            <div class="col-xs-1">
+                                <select class="form-control input-sm" id="inputSemester">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+
+                            <label for="inputWeeks" class="control-label col-xs-1">Week(s)</label>
+                                <div class="col-xs-2">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" checked>1</label>
+                                        <label><input type="checkbox" checked>2</label>
+                                        <label><input type="checkbox" checked>3</label>
+                                        <label><input type="checkbox" checked>4</label>
+                                        <label><input type="checkbox" checked>5</label>
+                                        <label><input type="checkbox" checked>6</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" checked>7</label>
+                                        <label><input type="checkbox" checked>8</label>
+                                        <label><input type="checkbox" checked>9</label>
+                                        <label><input type="checkbox" checked>10</label>
+                                        <label><input type="checkbox" checked>11</label>
+                                        <label><input type="checkbox" checked>12</label>
+                                    </div>
+                                </div>
+                        </div>
+                        <hr  id="hrm">
+                </div>
+                
+                <!--
+                    ROOMS  
+                -->
+                
+                <div id="rooms">
+                    <div>
+                        <h2>Rooms</h2>
+                        <hr>
+                    </div>
+                    <div id="room1" class="col-xs-4">
+                        <h4>Choice 1</h4>
+                        
+                        <div class="form-group">
+                            <label for="inputArea" class="control-label col-xs-2">Area of Campus</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="addl1" onchange="configureDropDownLists(this,document.getElementById('bddl1')); configureDropDownListsMR(this,document.getElementById('mbddl1'))">
+                                        <option>East</option>
+                                        <option>Central</option>
+                                        <option>West</option>
+                                    </select>
+                                </div>
+          
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="bddl1" onchange="configureDropDownLists2(this,document.getElementById('rddl1'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputRoom" class="control-label col-xs-2">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="rddl1" onchange="configureDropDownListsC(this,document.getElementById('cddl1'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        
+                        
+                            <label for="inputCapacity" class="control-label col-xs-2">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="cddl1">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div id="mRoom2" class="col-xs-4">
+                        <h4>Choice 2 (optional)</h4>
+                        <div class="form-group">
+                            <label for="inputArea" class="control-label col-xs-2">Area of Campus</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="addl2" onchange="configureDropDownLists(this,document.getElementById('bddl2')); configureDropDownListsMR(this,document.getElementById('mbddl2'))">
+                                        <option>East</option>
+                                        <option>Central</option>
+                                        <option>West</option>
+                                    </select>
+                                </div>
+                        
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="bddl2" onchange="configureDropDownLists2(this,document.getElementById('rddl2'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                                <label for="inputRoom" class="control-label col-xs-2">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="rddl2" onchange="configureDropDownListsC(this,document.getElementById('cddl2'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        
+                            <label for="inputCapacity" class="control-label col-xs-2">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="cddl2">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div id="room3" class="col-xs-4">
+                        <h4>Choice 3 (optional)</h4>
+                        <div class="form-group">
+                            <label for="inputArea" class="control-label col-xs-2">Area of Campus</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="addl3" onchange="configureDropDownLists(this,document.getElementById('bddl3')); configureDropDownListsMR(this,document.getElementById('mbddl3'))">
+                                        <option>East</option>
+                                        <option>Central</option>
+                                        <option>West</option>
+                                    </select>
+                                </div>
+     
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="bddl3" onchange="configureDropDownLists2(this,document.getElementById('rddl3'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputRoom" class="control-label col-xs-2">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="rddl3" onchange="configureDropDownListsC(this,document.getElementById('cddl3'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        
+                            <label for="inputCapacity" class="control-label col-xs-2">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="cddl3">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-xs-12">
+                    <br>
+                    <hr>
+                </div>
+                
+                <!--
+                    MULTIPLE ROOMS  
+                -->
+                
+                <div id="rooms">
+                    <div>
+                        <h2>Multiple Room Bookings (optional)</h2>
+                        <hr>
+                    </div>
+                    <div id="room1" class="col-xs-4">
+                        <h4>Choice 1 (optional)</h4>
+                        
+                        <div class="form-group">
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="mbddl1" onchange="configureDropDownListsMRR(this,document.getElementById('mrddl1'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                            
+                            <label for="inputRoom" class="control-label col-xs-1">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="mrddl1" onchange="configureDropDownListsC(this,document.getElementById('mcddl1'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">                        
+                            <label for="inputCapacity" class="control-label col-xs-5">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="mcddl1">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div id="mRoom2" class="col-xs-4">
+                        <h4>Choice 2 (optional)</h4>
+                        <div class="form-group">
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="mbddl2" onchange="configureDropDownLists2(this,document.getElementById('mrddl2'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                                <label for="inputRoom" class="control-label col-xs-1">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="mrddl2" onchange="configureDropDownListsC(this,document.getElementById('mcddl2'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputCapacity" class="control-label col-xs-5">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="mcddl2">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div id="room3" class="col-xs-4">
+                        <h4>Choice 3 (optional)</h4>
+                        <div class="form-group">
+                            <label for="inputBuilding" class="control-label col-xs-2">Building</label>
+                                <div class="col-xs-5">
+                                    <select class="form-control input-sm" id="mbddl3" onchange="configureDropDownLists2(this,document.getElementById('mrddl3'))">
+                                        <option>Any</option>
+                                        <option>Clyde Williams</option>
+                                        <option>Sir John Beckwith</option>
+                                        <option>John Cooper</option>
+                                        <option>Matthew Arnold</option>
+                                    </select>
+                                </div>
+                            <label for="inputRoom" class="control-label col-xs-1">Room</label>
+                                <div class="col-xs-4">
+                                    <select class="form-control input-sm" id="mrddl3" onchange="configureDropDownListsC(this,document.getElementById('mcddl3'))">
+                                        <option>Any</option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCapacity" class="control-label col-xs-5">Capacity</label>
+                                <div class="col-xs-3">
+                                    <select class="form-control input-sm" id="mcddl3">
+                                        <option></option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xs-12">
+                    <br>
+                    <hr>
+                </div>
+              
+                <!--
+                    SPECIAL REQUIREMENTS  
+                -->
+                
+                <div id="specPref">
+                    <div>
+                        <h2>Special Requirements</h2>
+                        <hr>
+                    </div>
+                    <div class="form-group">
+                    
+                    <div class="col-xs-offset-2 col-xs-1">
+                        <div class="checkbox ">
+                            <label><input type="checkbox" checked>Projector / Smartboard</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox" checked>Computer</label>
+                        </div>
+                    </div>
+                   <div class=" col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox" checked>Data Projector</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox">Visualiser</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox">DVD Player</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox">Blu Ray Player</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox">Whiteboard</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox">Glass Whiteboard</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox">Wheelchair Access</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox">PA System</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox">Dual Data Projection</label>
+                        </div>
+                    
+                        <div class="checkbox">
+                            <label><input type="checkbox">Radio Microphone</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="checkbox">
+                            <label><input type="checkbox">ReVIEW Capture</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox">Hearing Loop</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-1 col-xs-10">
+                            <br>
+                            <label for="comment">Additional Requirements:</label>
+                            <textarea class="form-control" rows="4" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <hr  id="hrm">
+                </div>
+                    <div class="form-group">
+                    <div class="col-xs-offset-1 col-xs-10">
+                        <button type="submit" class="btn btn-lg btn-block" id="subB"><a href="confirm.html">Submit</a></button>
+                    </div>
+                </div>    
+                </div>
+            </form>
+        </div>
+</div>
+</body>
+</html>  

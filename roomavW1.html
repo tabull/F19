@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loughborough University Timetable Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+<script src="dropdown.js"></script>
+<link rel="stylesheet" href="roomav.css" type="text/css">
+</head>
+<body>
+    
+<!--
+    NAVBAR  
+-->
+    
+<nav id="navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <img style="max-width:204px; margin-top: -7px;"
+             src="lulogoW.png">
+        </div>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="form.html">Form</a></li>
+        <li><a href="roomav.html">Room Availability</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="booking.html">Booking Status</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+        <p>You are logged in as, Bob Murphy</p>
+        <div id="button">
+          <button type="button" class="btn" id="regButton"><a href="login.html">Logout</a></button>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<!--
+    TABLE
+-->
+  
+    <div class="container">
+      <h2>Room Availability</h2>
+        <div id="fBorder" class="bs-example">
+            <form class="form-horizontal">
+                <div id="roomAV">
+                    
+                <div class="form-group">
+        <label for="inputArea" class="control-label col-xs-2">Area of Campus</label>
+                    <div class="col-xs-2">
+                        <select class="form-control" id="addl1" onchange="configureDropDownLists(this,document.getElementById('bddl1'))">
+                            <option>Any</option>
+                            <option>East</option>
+                            <option>Central</option>
+                            <option selected>West</option>
+                        </select>
+                    </div>
+        
+        <label for="inputBuilding" class="control-label col-xs-1">Building</label>
+                    <div class="col-xs-2">
+                        <select class="form-control" id="bddl1">
+                            <option>Any</option>
+                            <option>Keith Green</option>
+                            <option>John Pickford</option>
+                            <option>IPTME</option>
+                        </select>
+                    </div>
+        <label for="inputRooms" class="control-label col-xs-1">Day</label>
+                    <div class="col-xs-2">
+                        <select class="form-control" id="inputRooms">
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                        </select>
+                        
+                    </div>
+                    <label for="inputWeek" class="control-label col-xs-1">Week</label>
+                    <div class="col-xs-1">
+                        <select class="form-control" id="inputRooms">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                    <hr>
+            </div>
+                    
+            <div id="roomAV">
+            
+        <div class="form-group">
+                    <div class="col-xs-offset-1 col-xs-10">
+                        <button type="button" class="btn btn-lg btn-block" id="subButton" onClick="javascript:location.href = 'roomavE1.html'">Search</button>
+                    </div>
+                </div>
+      
+            </div>
+        
+            </form>
+        </div>
+      
+        <div id="fBorder">
+            <div id="roomAV">
+          <h4>West - Any - Monday - Week 1</h4>
+
+            <nav>
+              <ul class="pagination" id="pages">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span>                  </a></li>
+                      <li class="active"><a href="roomavW1.html">1 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW2.html">2 <span class="sr-only"></span></a></li>
+                      <li><a href="roomavW3.html">3 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW4.html">4 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW5.html">5 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW6.html">6 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW7.html">7 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW8.html">8 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW9.html">9 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW10.html">10 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW11.html">11 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="roomavW12.html">12 <span class="sr-only">(current)</span></a></li>
+                  <li>
+                      <a href="roomavW2.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                 </li>
+              </ul>
+            </nav>
+            </div>
+        </div>
+   
+      <table class="table table-bordered"  id="table">
+        <thead>
+          <tr>
+            <th>Area of Campus</th>
+            <th>Building</th>
+            <th>Room</th>
+            <th>Availability</th>
+            <th>09:00-10:00</th>
+            <th>10:00-11:00</th>
+            <th>11:00-12:00</th>
+            <th>12:00-13:00</th>
+            <th>13:00-14:00</th>
+            <th>14:00-15:00</th>
+            <th>15:00-16:00</th>
+            <th>16:00-17:00</th>
+            <th>17:00-18:00</th>
+          </tr>
+            
+        </thead>
+        <tbody>
+          <tr>
+            <td>West</td>
+            <td>Keith Green</td>
+            <td>KG.1.07</td>
+            <td id="cCodeA"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+            
+            <tr>
+            <td>West</td>
+            <td>Keith Green</td>
+            <td>KG.1.09</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+          </tr>
+          <tr>
+            <td>West</td>
+            <td>Keith Green</td>
+            <td>KG.1.11</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+         
+            <tr>
+            <td>West</td>
+            <td>Keith Green</td>
+            <td>KG.1.12</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='formC.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+            <tr>
+            <td>West</td>
+            <td>John Pickford</td>
+            <td>HH.0.23</td>
+            <td id="cCodeA"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+             <tr>
+            <td>West</td>
+            <td>John Pickford</td>
+            <td>HH.0.23a</td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+            <td id="cCodeB"></td>
+          </tr>
+          <tr>
+            <td>West</td>
+            <td>IPTME</td>
+            <td>S.0.04</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+          <tr>
+            <td>West</td>
+            <td>IPTME</td>
+            <td>S.0.06</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+          <tr>
+            <td>West</td>
+            <td>IPTME</td>
+            <td>S.1.73</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+          <tr>
+            <td>West</td>
+            <td>IPTME</td>
+            <td>S.1.74</td>
+            <td id="cCodeP"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+            <td id="cCodeB"></td>
+            <td id="bookTime" onclick="window.location='form.html'"></td>
+          </tr>
+        </tbody>
+      </table>
+           
+    </div>
+</body>
+</html>

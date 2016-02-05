@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loughborough University Timetable Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="login.js"></script>
+<link rel="stylesheet" href="main.css" type="text/css">      
+</head>
+<body>
+    
+<!--
+    NAVBAR
+-->
+    
+<nav id="navbar" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img style="max-width:204px; margin-top: -7px;"
+             src="lulogoW.png">
+        </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+      </ul> 
+    </div>
+  </div>
+</nav>
+    
+<!--
+    BODY
+-->
+    
+    <div class="container">
+    <form class="form-horizontal" id="fBorderP">
+        <h1>
+        Login or Register
+        </h1>
+        <br>
+        
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <div class="col-xs-12">
+            <input type="email" id="email" class="form-control" placeholder="Email address" name="email"> <!-- required autofocus -->
+        </div>
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+        <div class="col-xs-12">
+            <input type="password" id="password" class="form-control" placeholder="Password" name="password"> <!-- required -->
+        </div>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        
+        <hr>
+        <div class="col-xs-12">
+            <button id="loginB" class="btn btn-lg btn-block" type="button" onclick="login();">Login</button>
+        </div>
+        
+        <div class="col-xs-12">
+            <button id="regisB" class="btn btn-lg btn-block" type="submit"><a href="register.html">Register</a></button>
+        </div>
+        <br>
+        <p><a href="password.html">Need to change your password?</a></p>
+      </form>
+    </div>
+</body>
+</html>  
+

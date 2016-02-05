@@ -1,0 +1,485 @@
+/*
+--------------------
+    MAIN CONTENT
+--------------------
+*/
+
+.bs-example{
+    margin: 20px;
+}
+
+.form-horizontal .control-label{
+    padding-top: 7px;
+}
+.navbar-nav > li > a {
+    min-height:65px !important;
+}
+
+.navbar {
+    min-height:65px !important;
+}
+.form {
+    margin: 0 auto;
+}
+
+.container {
+    width:95%;
+    border:10px;
+    text-align:center;
+}
+
+#container {
+    display:inline-block;
+}
+
+#navbar {
+    background-color:#31006B;
+    color:white;
+}
+
+#navbar ul a {
+    color:white;
+}
+
+#navbar ul a:hover {
+    background-color:#CC0066;
+}
+
+.navbar p {
+    font-size: 11px;
+    padding:10px;
+    margin-top: 12px;
+    margin-right: 80px;
+    position:absolute; top:0; right:0;
+}
+
+.rNavbar p {
+    position:absolute; right:1em;
+}
+
+.box {
+    display: inline-block; 
+    height: 200px;
+    width: 200px;
+    line-height: 190px; /* centers text vertically */
+    background: #31006B;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+    
+.box:hover {
+    background: #CC0066;
+}
+
+a {
+    color: white;
+    height: 100%; 
+    width: 100%; 
+    display: block;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#ddContainer {
+    height: 20px;
+    display:inline;
+}
+
+#home {
+    font-size: 50px;
+    color:#31006B;
+    margin-right: 40px;
+}
+
+#home:hover {
+    color:#CC0066;
+}
+
+/*
+--------------
+    FORM
+--------------
+*/
+
+form {
+    width:100%;
+    height:80%;
+    margin:auto;
+    position:relative;
+    font-size:11px;
+}
+
+#module {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+}
+
+#timeReq {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+}
+
+#rooms {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+}
+
+#specPref {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+}
+
+#fBorder {
+    border-style:solid;
+    border-width:1px;
+    border-color:#E4E4E4;
+    width:90%;
+    display:inline-block;
+}
+
+#fBorderP { /* SMALLER FORM FRAME FOR PASSWORD */
+    border-style:solid;
+    border-width:1px;
+    border-color:#E4E4E4;
+    width:45em;
+    display:inline-block;
+}
+
+hr {
+    border-width:1px;
+    border-color:#E4E4E4;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom:10px;
+}
+
+#hrc { /*SEPERATE HR STYLE FOR CONTACT*/
+    border-width:1px;
+    border-color:#E4E4E4;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom:10px;
+}
+
+input {
+    height: 50px important!;
+}
+
+#hrm {
+    margin-bottom:0px;
+}
+
+#mRoom2 { 
+    border-left: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+
+}
+
+#search {
+    background-color:#F2F2F2;
+    color:black;
+    padding:5px;
+}
+
+
+
+/*
+--------------
+    SLIDER
+--------------
+*/
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 3.3px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.22), 0px 0px 0.5px rgba(13, 13, 13, 0.22);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px rgba(13, 13, 13, 0.32);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  background: #cc0066;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.22), 0px 0px 0.5px rgba(13, 13, 13, 0.22);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px rgba(13, 13, 13, 0.32);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  background: #cc0066;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #808080;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.22), 0px 0px 0.5px rgba(13, 13, 13, 0.22);
+}
+input[type=range]::-ms-fill-upper {
+  background: #ffffff;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.22), 0px 0px 0.5px rgba(13, 13, 13, 0.22);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px rgba(13, 13, 13, 0.32);
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  background: #cc0066;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+
+
+/* 
+--------------
+    TABLE
+--------------
+*/
+
+table {
+   margin-top:30px;
+}
+
+th { /* TABLE HEADER */
+    background-color:#31006B;
+    color:white;
+    font-size:11px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td { /* TABLE DATA */
+    font-size:10px;
+    vertical-align: middle;
+}
+
+#cCodeAS { /* available search */
+    background-color:#96db96;
+    color:#96db96;
+}
+
+#cCodeBS { /* booked search */
+    background-color: #ee7e7b;
+    color:#ee7e7b;
+}
+
+    /*
+        SEPERATE COLOUR CODE FOR BOOKING AND SEARCH
+    */
+
+#cCodeA { /* available */
+        background-color:#96db96;
+        color:white;
+    }
+    
+#cCodeP { /* partial */
+    background-color: #f2d456;
+    color:white;
+}
+
+#cCodeB { /* booked */
+    background-color: #ee7e7b;
+    color:white;
+}
+
+#cCodeB:hover {
+    background-color: #e53c37;
+    color:black;
+}
+
+/*
+--------------
+    HEADERS
+--------------
+*/
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top:20px;
+}
+
+h2 {
+    font-size:20px;
+    margin-top:0px;
+}
+
+h3 {
+    text-align:center;
+    margin-bottom:8px;
+    font-size:20px;
+    margin-top:2px;
+}
+
+h4 {
+    text-align:center;
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+h5 {
+    margin-left: 20px;
+    margin-top:5px;
+}
+
+p a {
+    color:cornflowerblue;
+}
+
+p a:hover {
+    color:black;
+}
+
+/*
+--------------
+    BUTTONS
+--------------
+*/
+
+#button {
+    padding: 10px;
+    margin-top: 2px;
+    margin-right: 2px;
+    position:absolute; top:0; right:0;
+}
+
+#regButton a {
+    text-decoration: none;
+    color: white;
+}
+
+#regButton a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#regButton {
+    background-color:#CC0066;
+    color:white;
+}
+
+#logButton a {
+    text-decoration: none;
+    color: #31006B;
+    background-color: white;
+}
+
+#logButton {
+    text-decoration: none;
+    background-color:white;
+    color:#31006B;
+}
+
+#logButton a:hover {
+    text-decoration: none;
+    color: #CC0066; 
+}
+
+#loginB {
+    background-color:#31006B;
+    color: white;
+}
+
+#loginB a {
+    color:white;
+}
+
+#regisB a {
+    color:white;
+}
+
+#regisB {
+    background-color:#CC0066;
+    color:white;
+}
+
+#subB a {
+    color:white;
+    text-decoration: none;
+}
+
+#subB {
+    background-color:#CC0066;
+    color:white;
+}
+
+#subButton {
+    text-decoration: none;
+    color: white;
+    background-color:#CC0066;
+}
+    
+#subButton:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#roundNav li {
+    font-size:20px;
+    background-color:#31006B !important;
+}
+
+#roundNav li :hover{
+    background-color:#CC0066 !important;
+}
+
+
+
