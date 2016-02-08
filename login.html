@@ -1,15 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Loughborough University Timetable Form</title>
+<title>Loughborough University Timetable System - Login</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="login.js"></script>
-<link rel="stylesheet" href="main.css" type="text/css">      
-</head>
+<link rel="stylesheet" href="main.css" type="text/css"> 
+  
+    
+<?php
+include('connect.php');
+?> 
+      
+    
+</head>    
 <body>
     
 <!--
@@ -37,39 +47,46 @@
     
     <div class="container">
     <form class="form-horizontal" id="fBorderP">
-        <h1>
-        Login or Register
-        </h1>
-        <br>
-        
-        <label for="inputEmail" class="sr-only">Email Address</label>
+            <h1>
+                Login or Register
+            </h1>
+            <br>
+            <hr>
+            
+        <div>
+            <div class="col-xs-12">
+                
+                <label for="inputUnEmail" class="sr-only">UnEmail</label>
         <div class="col-xs-12">
-            <input type="email" id="email" class="form-control" placeholder="Email address" name="email"> <!-- required autofocus -->
+            <input type="email" id="email" class="form-control" placeholder="User Name / Email address" name="unEmail"> <!-- required autofocus -->
         </div>
         
-        <label for="inputPassword" class="sr-only">Password</label>
+         <label for="inputPassword" class="sr-only">Password</label>
         <div class="col-xs-12">
             <input type="password" id="password" class="form-control" placeholder="Password" name="password"> <!-- required -->
         </div>
-        
-        <div class="checkbox">
+            <div class="rmbrme">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        
+                </div>
+            </div>
         <hr>
         <div class="col-xs-12">
             <button id="loginB" class="btn btn-lg btn-block" type="button" onclick="login();">Login</button>
         </div>
         
         <div class="col-xs-12">
-            <button id="regisB" class="btn btn-lg btn-block" type="submit"><a href="register.html">Register</a></button>
+            <button id="regisB" class="btn btn-lg btn-block" type="submit">
+                <a href="register.php">Register</a></button>
+        </div> 
+    
+        <p> <a href="email.html">Change Email ID?</a>
+        <a href="password.html">Change Password?</a></p>
+        
+               </form>
         </div>
-        <br>
-        <p><a href="password.html">Need to change your password?</a></p>
-      </form>
-    </div>
-</body>
+</body>    
 </html>  
 
