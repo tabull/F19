@@ -156,6 +156,7 @@ form {
     border-color:#E4E4E4;
     width:90%;
     display:inline-block;
+    background-color:#F2F2F2;
 }
 
 #fBorderP { /* SMALLER FORM FRAME FOR PASSWORD */
@@ -182,6 +183,11 @@ hr {
     margin-bottom:10px;
 }
 
+#formLeft {
+    border-right:1px solid #E4E4E4;   
+    
+}
+
 input {
     height: 50px important!;
 }
@@ -205,6 +211,7 @@ input {
 .rmbrme {
     font-family:monospace; 
 }
+
 
 
 
